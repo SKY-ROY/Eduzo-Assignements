@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class AnimationEvents : MonoBehaviour
 {
+    public string launchScene;
+
     private PlayerController playerController;
     private Animator anim;
     
@@ -22,6 +24,6 @@ public class AnimationEvents : MonoBehaviour
 
     void CameraStartGame()
     {
-        SceneManager.LoadScene("GamePlay");
+        SceneManager.LoadScene(launchScene);
     }
 }

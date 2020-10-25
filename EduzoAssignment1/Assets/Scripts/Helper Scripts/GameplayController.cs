@@ -169,6 +169,7 @@ public class GameplayController : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Gameplay");//respective name for each scene
+        string sceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(sceneName);//respective name for each scene
     }
 }

@@ -6,8 +6,9 @@ public class BaseController : MonoBehaviour
 {
     [Header("Movement Parameters")]
     public Vector3 speed;
-    public float xSpeed = 7.5f, zSpeed = 15f, accelerated = 25f, decelerated = 5f;
+    public float xSpeed = 7.5f, zSpeed = 15f, accelerated = 25f, decelerated = 5f, altitudeHigh = 1f, altitudeLow = -1f, altitudeNormal = 1.5f;
     public float speedIncrementPeriod = 30f;
+    public bool isFlyingVehicle;
 
     [Header("On-screen buttons")]
     public GameObject shootButton;
@@ -50,9 +51,8 @@ public class BaseController : MonoBehaviour
 
     protected void MoveNormal()
     {
-        speed = new Vector3(speed.x, 0f, zSpeed);
+        speed = new Vector3(speed.x, 0f, zSpeed);   
     }
-
     protected void MoveSlow()
     {
         speed = new Vector3(speed.x, 0f, decelerated);
@@ -62,4 +62,15 @@ public class BaseController : MonoBehaviour
     {
         speed = new Vector3(speed.x, 0f, accelerated);
     }
+
+    public void MoveDown()
+    {
+        speed = new Vector3(speed.x, altitudeLow, speed.z);
+    }
+
+    public void MoveUp()
+    {
+        speed = new Vector3(speed.x, altitudeHigh, speed.z);
+    }
+
 }

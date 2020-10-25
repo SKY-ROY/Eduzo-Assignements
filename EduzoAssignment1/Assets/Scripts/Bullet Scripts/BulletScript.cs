@@ -10,7 +10,6 @@ public class BulletScript : MonoBehaviour
     void Awake()
     {
         myBody = GetComponent<Rigidbody>();
-
     }
 
     public void Move(float speed)

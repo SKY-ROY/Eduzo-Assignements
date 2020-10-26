@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class BaseController : MonoBehaviour
 {
     [Header("Movement Parameters")]
     public Vector3 speed;
-    public float xSpeed = 7.5f, zSpeed = 15f, accelerated = 25f, decelerated = 5f, altitudeHigh = 1f, altitudeLow = -1f, altitudeNormal = 1.5f;
+    public float xSpeed = 7.5f, zSpeed = 15f, accelerated = 25f, decelerated = 5f;
+    public float maxAltitude = 3.5f, normalAltitude = 2f, minAltitude = 0.5f, upLift = 1f, downLift = 1f;
     public float speedIncrementPeriod = 30f;
     public bool isFlyingVehicle;
 
@@ -33,6 +35,25 @@ public class BaseController : MonoBehaviour
         timePassed = 0f;
     }
 
+    protected void MoveNormal()
+    {
+        if (isFlyingVehicle)
+        {
+            speed = new Vector3(speed.x, 0f, zSpeed);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        }
+        else
+        {
+            speed = new Vector3(speed.x, 0f, zSpeed);
+        }
+    }
+
+    //forward movement
+    protected void MoveStraight()
+    {
+        speed = new Vector3(0f, 0f, speed.z);
+    }
+
     //sideways movement towards left
     protected void MoveLeft()
     {
@@ -43,34 +64,28 @@ public class BaseController : MonoBehaviour
     {
         speed = new Vector3(xSpeed / 2f, 0f, speed.z);
     }
-    //forward movement
-    protected void MoveStraight()
+    
+    //for ground vehicles
+    //Increase speed
+    protected void MoveFast()
     {
-        speed = new Vector3(0f, 0f, speed.z);
+        speed = new Vector3(speed.x, 0f, accelerated);
     }
-
-    protected void MoveNormal()
-    {
-        speed = new Vector3(speed.x, 0f, zSpeed);   
-    }
+    //Decrease speed
     protected void MoveSlow()
     {
         speed = new Vector3(speed.x, 0f, decelerated);
     }
 
-    protected void MoveFast()
-    {
-        speed = new Vector3(speed.x, 0f, accelerated);
-    }
-
-    public void MoveDown()
-    {
-        speed = new Vector3(speed.x, altitudeLow, speed.z);
-    }
-
+    //for air vehicles
+    //Increase altitude
     public void MoveUp()
     {
-        speed = new Vector3(speed.x, altitudeHigh, speed.z);
+        speed = new Vector3(speed.x, upLift, speed.z);
     }
-
+    //Decrease altitude
+    public void MoveDown()
+    {
+        speed = new Vector3(speed.x, -downLift, speed.z);
+    }
 }

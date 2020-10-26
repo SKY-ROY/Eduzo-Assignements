@@ -166,7 +166,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &8048838595726094858
 BoxCollider:
@@ -198,9 +198,11 @@ MonoBehaviour:
   zSpeed: 15
   accelerated: 25
   decelerated: 5
-  altitudeHigh: 1
-  altitudeLow: -1
-  altitudeNormal: 1.5
+  maxAltitude: 3.5
+  normalAltitude: 2
+  minAltitude: 0.5
+  upLift: 1
+  downLift: 1
   speedIncrementPeriod: 30
   isFlyingVehicle: 0
   shootButton: {fileID: 0}

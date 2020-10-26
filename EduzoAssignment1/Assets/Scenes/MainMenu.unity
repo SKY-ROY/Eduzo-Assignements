@@ -1483,7 +1483,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Zombie Smasher
+  m_Text: Ground zero
 --- !u!222 &2041821651
 CanvasRenderer:
   m_ObjectHideFlags: 0

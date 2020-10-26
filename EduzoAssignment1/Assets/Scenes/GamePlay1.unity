@@ -4855,7 +4855,7 @@ PrefabInstance:
     - target: {fileID: 5197551180929786896, guid: c0a94c310ae39064ea028d2593b1541b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5197551180929786896, guid: c0a94c310ae39064ea028d2593b1541b,
         type: 3}
@@ -4907,6 +4907,11 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5197551180929786899, guid: c0a94c310ae39064ea028d2593b1541b,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 5197551180929786900, guid: c0a94c310ae39064ea028d2593b1541b,
         type: 3}
       propertyPath: bullet_StartPoint
@@ -4925,17 +4930,32 @@ PrefabInstance:
     - target: {fileID: 5197551180929786900, guid: c0a94c310ae39064ea028d2593b1541b,
         type: 3}
       propertyPath: altitudeLow
-      value: -1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5197551180929786900, guid: c0a94c310ae39064ea028d2593b1541b,
         type: 3}
       propertyPath: altitudeNormal
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5197551180929786900, guid: c0a94c310ae39064ea028d2593b1541b,
         type: 3}
       propertyPath: bulletSpeed
       value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5197551180929786900, guid: c0a94c310ae39064ea028d2593b1541b,
+        type: 3}
+      propertyPath: altitudeHigh
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5197551180929786900, guid: c0a94c310ae39064ea028d2593b1541b,
+        type: 3}
+      propertyPath: downLift
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5197551180929786900, guid: c0a94c310ae39064ea028d2593b1541b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5197551180929786902, guid: c0a94c310ae39064ea028d2593b1541b,
         type: 3}

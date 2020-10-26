@@ -26,12 +26,6 @@ public class PlayerController : BaseController
         //shootSliderAnim = GameObject.Find("Firepower Bar").GetComponent<Animator>();
         shootSliderAnim = GameObject.Find("UI Holder").GetComponentInChildren<Animator>(true);
 
-        shootButton = GameObject.Find("Shoot Button");
-        upButton = GameObject.Find("Up Button");
-        downButton = GameObject.Find("Down Button");
-        rightButton = GameObject.Find("Right Button");
-        leftButton = GameObject.Find("Left Button");
-
         AssignOnScreenControlReference();
 
         canShoot = true;
@@ -174,6 +168,12 @@ public class PlayerController : BaseController
 
     void AssignOnScreenControlReference()
     {
+        shootButton = GameObject.Find("Shoot Button");
+        upButton = GameObject.Find("Up Button");
+        downButton = GameObject.Find("Down Button");
+        rightButton = GameObject.Find("Right Button");
+        leftButton = GameObject.Find("Left Button");
+
         //Shoot Button
         shootButton.GetComponent<HoldToClick>().onLongClickUp.AddListener(ShootingControl);
 

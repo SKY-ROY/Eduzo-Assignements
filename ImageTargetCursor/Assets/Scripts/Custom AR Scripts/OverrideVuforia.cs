@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class OverrideVuforia : MonoBehaviour
 {
+    public bool enableBG = false;
+
     private GameObject cameraBGPlane;
     private bool isBGFound = false;
 
@@ -12,9 +14,9 @@ public class OverrideVuforia : MonoBehaviour
         if(transform.childCount > 1 && !isBGFound)
         {
             cameraBGPlane = transform.GetChild(1).gameObject;
-            cameraBGPlane.SetActive(false);
+            cameraBGPlane.SetActive(enableBG);
 
-            isBGFound = false;        
+            isBGFound = true;
         }
     }
 }

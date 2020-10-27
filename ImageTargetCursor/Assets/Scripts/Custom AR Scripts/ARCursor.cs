@@ -21,6 +21,11 @@ public class ARCursor : MonoBehaviour
 
     private void Update()
     {
+        ButtonDetection();
+    }
+    
+    void ButtonDetection()
+    {
         RaycastHit hit;
         Ray landingRay = new Ray(ARCamera.transform.position, cursorObject.transform.position - ARCamera.transform.position);
 

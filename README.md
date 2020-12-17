@@ -5,4 +5,4 @@
 2. Actions to include - Lane Change (Left Right, Controlled by moving the AR Image target sideways), Jump and Crouch (Controlled by moving the AR Image target up /down) 
 3. 3D Assets can be taken from Unity Asset Store, Mixamo etc. Third party code usage shall be strictly limited to only the AR Components (Vuforia SDK).
 
-The [ImageTargetCursor]: https://github.com/SKY-ROY/Eduzo-Assignements/tree/main/ImageTargetCursor project is implementation of the above task.
+The [ImageTargetCursor](.../ImageTargetCursor) project is implementation of the above task.
